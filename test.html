@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorilla Trekking Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            background: url(gorilla.jpg) no-repeat center center/cover;
+        }
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header .overlay h1 {
+            color: #fff;
+            font-size: 3rem;
+            text-align: center;
+            padding: 0 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 2rem;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card h3 {
+            padding: 15px;
+            font-size: 1.5rem;
+            background: #2e7d32;
+            color: #fff;
+        }
+        .card p {
+            padding: 15px;
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2e7d32;
+            color: #fff;
+        }
+        footer a {
+            color: #ffd600;
+            text-decoration: none;
+        }
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #2e7d32;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .button:hover {
+            background-color: #1b5e20;
+        }
+        .contact-button {
+            display: block;
+            margin: 30px auto;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="overlay">
+            <h1>Discover the Wild - Gorilla Trekking</h1>
+        </div>
+    </header>
+    <main>
+        <div class="main-body">
+            <div class="main-content">
+                <section class="section">
+                    <h2>About the Trek</h2>
+                    <p>Join us for an unforgettable journey into the heart of Uganda's lush forests, where you'll encounter majestic mountain gorillas in their natural habitat. Experience the thrill of trekking through dense jungles, guided by expert trackers.</p>
+                    <a href="#contact-us" class="button contact-button">Get in Touch</a>
+                </section>
+                <section class="section">
+                    <h2>Tour Highlights</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <img src="gorilla2.jpg" alt="Highlight 1">
+                            <h3>Close Gorilla Encounters</h3>
+                            <p>Get up close with mountain gorillas and observe their behavior in the wild.</p>
+                        </div>
+                        <div class="card">
+                            <img src="gorilla3.jpg" alt="Highlight 2">
+                            <h3>Breathtaking Landscapes</h3>
+                            <p>Marvel at the stunning views of dense forests and rolling hills.</p>
+                        </div>
+                        <div class="card">
+                            <img src="forest.jpg" alt="Highlight 3">
+                            <h3>Expert Guides</h3>
+                            <p>Learn from experienced guides who will ensure your safety and enrich your adventure.</p>
+                        </div>
+                        <div class="card">
+                            <img src="jj.jpg" alt="Highlight 4">
+                            <h3>Memorable Trekking Trails</h3>
+                            <p>Explore the trails that lead to these incredible primates, soaking in nature's beauty.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2>Travel Tips</h2>
+                    <p>Prepare for your trek by wearing comfortable hiking boots, bringing a raincoat, and carrying enough water. Follow your guide’s instructions and maintain a respectful distance from the gorillas.</p>
+                </section>
+                <section class="section">
+                    <h2>Pricing and Packages</h2>
+                    <p>We offer various packages to suit your needs, ranging from one-day treks to multi-day adventures. Contact us for a customized itinerary and pricing details.</p>
+                </section>
+                <section class="section">
+                    <h2>Customer Testimonials</h2>
+                    <div class="grid">
+                        <div class="card">
+                            <p>"The trek was amazing! Seeing the gorillas up close was a dream come true." - Sarah K.</p>
+                        </div>
+                        <div class="card">
+                            <p>"The guides were professional and knowledgeable. Highly recommend this experience." - John D.</p>
+                        </div>
+                        <div class="card">
+                            <p>"Breathtaking landscapes and unforgettable moments with the gorillas." - Emily R.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+            </main>
+
+    <footer id="contact-us">
+        <p>&copy; 2025 Gorilla Trekking Adventures. All rights reserved. | <a href="#">Contact Us</a></p>
+        <div class="button-container">
+            <a href="#" class="button">Send a Message</a>
+            <a href="#" class="button">Call Us</a>
+        </div>
+    </footer>
+</body>
+</html>
