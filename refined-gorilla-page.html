@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorilla Trekking | JK Travel Trails</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+
+
+        /* Reset styles */
+        .header {
+            width: 100%;
+            border: none;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .links li {
+            display: inline;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #ffd600;
+        }
+
+        .action_btn {
+            background-color: red;
+            padding: 8px 15px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .action_btn:hover {
+            background-color: darkred;
+            transform: scale(1.05);
+        }
+
+        .action_btn2 {
+            background-color: green;
+            padding: 8px 15px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .action_btn2:hover {
+            background-color: darkgreen;
+            transform: scale(1.05);
+        }
+
+        .toggle_btn {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .dropdown_menu {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: #2e7d32;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            padding: 15px 20px;
+        }
+
+        .dropdown_menu li {
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown_menu li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown_menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: block;
+            width: 100%;
+        }
+
+        .dropdown_menu a:hover {
+            color: #ffd600;
+        }
+
+        .open {
+            display: flex;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .links {
+                display: none;
+            }
+
+            .toggle_btn {
+                display: block;
+                color: white;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .header2 {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            background: url(3d-rendering-gorilla-portrait.jpg) no-repeat center center/cover;
+        }
+        .header2 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header2 .overlay h1 {
+            color: #fff;
+            font-size: 3rem;
+            text-align: center;
+            padding: 0 20px;
+        } */
+        main {
+            padding: 20px;
+        }
+        
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .button-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2e7d32;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .button-primary:hover {
+            background-color: #1b5e20;
+            transform: scale(1.05);
+        }
+
+        .about-trek {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .tour-highlights {
+            background-color: #eef7ee;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .highlight-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .highlight-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .highlight-card h3 {
+            font-size: 1.5rem;
+            color: #2e7d32;
+            padding: 10px;
+        }
+
+        .highlight-card p {
+            padding: 10px 15px;
+            color: #555;
+        }
+        .footer {
+            background-color: #2e7d32;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: left;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-about,
+        .footer-links,
+        .footer-contact {
+            padding: 10px;
+        }
+
+        .footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffd600;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: #ffd600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ffffff;
+        }
+
+        .footer-contact .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #ffd600;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact .social-icons a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.9rem;
+        }
+
+
+        .testimonials {
+            background-color: #ffffff;
+            padding: 50px 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .testimonial-card {
+            background: #eef7ee;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .testimonial-card h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+        <header class="header">
+            <div class="navbar">
+              <a href="home.php"><img class="logo" src="Logos/JK TRAVELS.png"></a>
+              <ul class="links">
+                <li><a href="home.php">Home</a></li>
+                <li><a href="AboutUs.php">About</a></li>
+                <li><a href="safarisUganda.php">Safaris</a></li>
+                <li><a href="experiences.php">Experiences</a></li>
+                <li><a href="gallery.php">Gallery</a></li>
+                <li><a href="blog.php">Blog</a></li>
+              </ul>
+              <a class="action_btn2" aria-label="chat on WhatsApp" href="https://wa.me/256780433746" style="color: white;"> <i class="fa-brands fa-whatsapp"></i> Lets Chat</a>
+              <a href="contact.php" class="action_btn" style="color: white;">Contact Us</a>
+              <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+            </div>
+
+            <div class="dropdown_menu">
+              <li><a href="home.php">Home</a></li>
+              <li><a href="AboutUs.php">About</a></li>
+              <li><a href="safarisUganda.php">Safaris</a></li>
+              <li><a href="experiences.php">Experiences</a></li>
+              <li><a href="gallery.php">Gallery</a></li>
+              <li><a href="blog.php">Blog</a></li>
+              <li><a href="contact.php" class="action_btn">Contact Us</a></li>
+              
+            </div>
+
+          </header>
+
+          <script>
+              const toggleBtn = document.querySelector('.toggle_btn')
+              const toggleBtnIcon = document.querySelector('.toggle_btn i')
+              const dropDownMenu = document.querySelector('.dropdown_menu')
+
+              toggleBtn.onclick = function () {
+                  dropDownMenu.classList.toggle('open')
+
+                  // CODE FOR THE 'X' MARK ON THE DROPDOWN MENU
+                  const isOpen = dropDownMenu.classList('open')
+
+                  toggleBtnIcon.classList = isOpen
+                  ? 'fa-solid fa-xmark'
+                  : 'fa-solid fa-bars'
+              }
+          </script>
+        <div class="header2"> 
+            <div class="overlay">
+                <h1>Discover the Wild - Gorilla Trekking</h1>
+            </div>
+        </div>
+
+
+    <main>
+        <div class="main-body">
+            <div class="main-content">
+                <section class="about-trek">
+                    <div class="container">
+                        <h2>About the Trek</h2>
+                        <p>
+                            Join us for an unforgettable journey into the heart of Uganda's lush forests, where you'll encounter majestic mountain gorillas in their natural habitat. Experience the thrill of trekking through dense jungles, guided by expert trackers.
+                        </p>
+                        <a href="#contact-us" class="button-primary">Get in Touch</a>
+                    </div>
+                </section>
+                
+                <section class="tour-highlights">
+                    <div class="container">
+                        <h2>Tour Highlights</h2>
+                        <div class="highlight-grid">
+                            <div class="highlight-card">
+                                <img src="gorilla2.jpg" alt="Close Gorilla Encounters">
+                                <h3>Close Gorilla Encounters</h3>
+                                <p>Get up close with mountain gorillas and observe their behavior in the wild.</p>
+                            </div>
+                            <div class="highlight-card">
+                                <img src="gorilla3.jpg" alt="Breathtaking Landscapes">
+                                <h3>Breathtaking Landscapes</h3>
+                                <p>Marvel at the stunning views of dense forests and rolling hills.</p>
+                            </div>
+                            <div class="highlight-card">
+                                <img src="forest.jpg" alt="Expert Guides">
+                                <h3>Expert Guides</h3>
+                                <p>Learn from experienced guides who will ensure your safety and enrich your adventure.</p>
+                            </div>
+                            <div class="highlight-card">
+                                <img src="jj.jpg" alt="Memorable Trekking Trails">
+                                <h3>Memorable Trekking Trails</h3>
+                                <p>Explore the trails that lead to these incredible primates, soaking in nature's beauty.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="testimonials">
+                    <div class="container">
+                        <h2>What Our Guests Say</h2>
+                        <div class="testimonial-grid">
+                            <div class="testimonial-card">
+                                <p>
+                                    "The gorilla trekking experience was beyond words. Being so close to these majestic creatures in their natural habitat was life-changing. Thank you for an amazing adventure!"
+                                </p>
+                                <h3>– Sarah M.</h3>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>
+                                    "The guides were incredibly knowledgeable and made the entire trek safe and enjoyable. I would highly recommend this to anyone seeking an unforgettable journey."
+                                </p>
+                                <h3>– James K.</h3>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>
+                                    "This was the best trip of my life! The landscapes, the gorillas, and the professionalism of the team exceeded all expectations. Highly recommended!"
+                                </p>
+                                <h3>– Maria L.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+            </main>
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-about">
+                        <h3>About Us</h3>
+                        <p>
+                            We are dedicated to offering unforgettable trekking experiences that bring you closer to nature and the majestic gorillas of Uganda. Join us for adventures you'll cherish forever.
+                        </p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="home.php">Home</a></li>
+                            <li><a href="AboutUs.php">About</a></li>
+                            <li><a href="safarisUganda.php">Safaris</a></li>
+                            <li><a href="experiences.php">Experiences</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p>Email: info@gorillatrekking.com</p>
+                        <p>Phone: +256 780 433 746</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://wa.me/256780433746" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Gorilla Trekking Adventures. All rights reserved.</p>
+                </div>
+            </footer>
+            
+</body>
+</html>
