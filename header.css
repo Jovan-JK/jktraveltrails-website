@@ -1,0 +1,193 @@
+.header {
+    background-color: rgba(216, 215, 215, 1);
+    height: 80px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding: 4px;
+    z-index: 100;
+}
+.logo {
+    margin-top: 14px;
+    width: 80px;
+    height: auto;
+    margin-left: 30px;
+
+}
+.links {
+    font-size: 20px;
+}
+@media only screen and (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    .header {
+        /* position: sticky; */
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+        height: auto; /* Allow the header to grow with content */
+    }
+
+    .logo {
+        margin: 10px 0; /* Adjust margin for responsiveness */
+    }
+
+    .right-section {
+        flex-direction: column; /* Stack menu items vertically on smaller screens */
+        margin: 10px 0; /* Adjust margin for responsiveness */
+    }
+
+    .menu-item {
+        margin: 5px 0; /* Adjust margin for responsiveness */
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;  
+}
+
+a:hover{
+    color: red;
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbar .links {
+    display: flex;
+    gap: 32px;
+    font-size: 20px;
+}
+
+.toggle_btn{
+    width: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+}
+
+.action_btn2 {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+.action_btn2:hover {
+    scale: 1.05;
+    color: white;
+}
+
+.action_btn2:active {
+    scale: 0.95;
+}
+/*DROPDOWN MENU*/
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu a {
+    color: red;
+}
+.dropdown_menu a:hover {
+    color: white;
+}
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+
+/*RESPONSIVENESS*/
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .toggle_btn {
+       display: block; 
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+@media (max-width: 400px) {
+    .dropdown_menu{
+        left: 48px;
+        top: 5rem;
+        width: unset;
+    }
+}
+.slideshow-container {
+    margin-top: 80px; /* Adjust margin to move the slider below the header */
+}
+
+@media only screen and (max-width: 600px) {
+    .slideshow-container {
+        margin-top: 0; /* Remove margin for small screens */
+    }
+}
